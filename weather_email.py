@@ -54,9 +54,9 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # Replace these with your own details or pass via environment variables (e.g. in GitHub Secrets)
-SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "mylyrical226@gmail.com")
-SENDER_APP_PASSWORD = os.environ.get("SENDER_APP_PASSWORD", "ykhn ezhq nrqd hknm")
-RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "m.abinesh555@gmail.com")
+SENDER_EMAIL = os.environ.get("SENDER_EMAIL") or "mylyrical226@gmail.com"
+SENDER_APP_PASSWORD = (os.environ.get("SENDER_APP_PASSWORD") or "ykhn ezhq nrqd hknm").replace(" ", "")
+RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL") or "m.abinesh555@gmail.com"
 
 
 # WMO Weather interpretation codes (WW)
@@ -505,3 +505,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
