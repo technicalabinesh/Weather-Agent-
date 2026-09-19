@@ -1,5 +1,4 @@
 name: Daily Weather Email Update
-
 on:
   # Run automatically every day at 02:00 UTC (7:30 AM IST)
   schedule:
